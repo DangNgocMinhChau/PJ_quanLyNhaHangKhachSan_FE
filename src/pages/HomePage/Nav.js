@@ -1,8 +1,27 @@
 import React from "react";
 import ModalCommon from "../../components/management_hotel/modalCommon";
 import Body from "./Body";
-
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
+import routes from './../../routers/routes'
 function Nav(props) {
+
+  function renderContentMenu(routes) {
+    var result = null;
+    if (routes.length > 0) {
+      result = routes.map((route, index) => {
+        return (
+          <Route
+            key={index}
+            path={route.path}
+            exact={route.exact}
+            component={route.main}
+          />
+        );
+      })
+    }
+    return result;
+  }
+  
   return (
     <div id="content-wrapper" class="d-flex flex-column">
       {/* <!-- Main Content --> */}
@@ -290,7 +309,9 @@ function Nav(props) {
             </li>
           </ul>
         </nav>
-        <Body />
+          <Switch>
+            {renderContentMenu(routes)}
+          </Switch>
       </div>
     </div>
   );

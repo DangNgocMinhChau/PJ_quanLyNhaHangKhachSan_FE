@@ -1,12 +1,13 @@
-import React from 'react';
+import React from "react";
 
-function Aboute(props)
-{
-    return (
-        <div>
-            about
-        </div>
-    );
+function Aboute({ match }) {
+  return (
+    <div>
+      Trang chi tiết
+      {match.url}<br/>
+      {match.params.id}
+    </div>
+  );
 }
 
 export default Aboute;

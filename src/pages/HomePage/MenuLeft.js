@@ -1,107 +1,100 @@
 import React from "react";
 
+import MenuConfig from "../../routers/menuConfig";
+
+
+
 function MenuLeft(props) {
   return (
     <ul
-      class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion"
+      className="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion"
       id="accordionSidebar"
     >
       {/* <!-- Sidebar - Brand --> */}
       <a
-        class="sidebar-brand d-flex align-items-center justify-content-center"
+        className="sidebar-brand d-flex align-items-center justify-content-center"
         href="index.html"
       >
-        <div class="sidebar-brand-icon rotate-n-15">
-          <i class="fas fa-laugh-wink"></i>
+        <div className="sidebar-brand-icon rotate-n-15">
+          <i className="fas fa-laugh-wink"></i>
         </div>
-        <div class="sidebar-brand-text mx-3">Quản lý khách sạn</div>
+        <div className="sidebar-brand-text mx-3">Quản lý khách sạn</div>
       </a>
 
       {/* <!-- Divider --> */}
-      <hr class="sidebar-divider my-0" />
+      <hr className="sidebar-divider my-0" />
 
       {/* <!-- Nav Item - Dashboard --> */}
-      <li class="nav-item active">
-        <a class="nav-link" href="index.html">
-          <i class="fas fa-fw fa-tachometer-alt"></i>
+      <li className="nav-item active">
+        <a className="nav-link" href="index.html">
+          <i className="fas fa-fw fa-tachometer-alt"></i>
           <span>Dashboard</span>
         </a>
       </li>
 
       {/* <!-- Divider --> */}
-      <hr class="sidebar-divider" />
+      <hr className="sidebar-divider" />
 
       {/* <!-- Heading --> */}
-      <div class="sidebar-heading">Hệ thống</div>
+      <div className="sidebar-heading">Hệ thống</div>
 
       {/* <!-- Nav Item - Pages Collapse Menu --> */}
-      <li class="nav-item">
+      <li className="nav-item">
         <a
-          class="nav-link collapsed"
+          className="nav-link collapsed"
           href="#"
           data-toggle="collapse"
           data-target="#collapseTwo"
           aria-expanded="true"
           aria-controls="collapseTwo"
         >
-          <i class="fas fa-fw fa-cog"></i>
+          <i className="fas fa-fw fa-cog"></i>
           <span>Quản lý nhà hàng</span>
         </a>
         <div
           id="collapseTwo"
-          class="collapse"
+          className="collapse"
           aria-labelledby="headingTwo"
           data-parent="#accordionSidebar"
         >
-          <div class="bg-white py-2 collapse-inner rounded">
-            <h6 class="collapse-header">Chức năng</h6>
-            <a class="collapse-item" href="buttons.html">
-              Danh sách
-            </a>
-            <a class="collapse-item" href="cards.html">
-              Thêm mới
-            </a>
-            <a class="collapse-item" href="cards.html">
-              Cập nhật
-            </a>
-            <a class="collapse-item" href="cards.html">
-              Xóa
-            </a>
+          <div className="bg-white py-2 collapse-inner rounded">
+            <h6 className="collapse-header">Chức năng</h6>
+              <MenuConfig/>
           </div>
         </div>
       </li>
 
       {/* <!-- Nav Item - Utilities Collapse Menu --> */}
-      <li class="nav-item">
+      <li className="nav-item">
         <a
-          class="nav-link collapsed"
+          className="nav-link collapsed"
           href="#"
           data-toggle="collapse"
           data-target="#collapseUtilities"
           aria-expanded="true"
           aria-controls="collapseUtilities"
         >
-          <i class="fas fa-fw fa-wrench"></i>
+          <i className="fas fa-fw fa-wrench"></i>
           <span>Quản lý khách sạn</span>
         </a>
         <div
           id="collapseUtilities"
-          class="collapse"
+          className="collapse"
           aria-labelledby="headingUtilities"
           data-parent="#accordionSidebar"
         >
-          <div class="bg-white py-2 collapse-inner rounded">
-            <h6 class="collapse-header">Custom Utilities:</h6>
-            <a class="collapse-item" href="utilities-color.html">
+          <div className="bg-white py-2 collapse-inner rounded">
+            <h6 className="collapse-header">Custom Utilities:</h6>
+            <a className="collapse-item" href="utilities-color.html">
               Colors
             </a>
-            <a class="collapse-item" href="utilities-border.html">
+            <a className="collapse-item" href="utilities-border.html">
               Borders
             </a>
-            <a class="collapse-item" href="utilities-animation.html">
+            <a className="collapse-item" href="utilities-animation.html">
               Animations
             </a>
-            <a class="collapse-item" href="utilities-other.html">
+            <a className="collapse-item" href="utilities-other.html">
               Other
             </a>
           </div>
@@ -109,36 +102,36 @@ function MenuLeft(props) {
       </li>
 
       {/* <!-- Divider --> */}
-      <hr class="sidebar-divider" />
+      <hr className="sidebar-divider" />
 
       {/* <!-- Heading --> */}
-      <div class="sidebar-heading">Quản lý người dùng</div>
+      <div className="sidebar-heading">Quản lý người dùng</div>
 
       {/* <!-- Nav Item - Pages Collapse Menu --> */}
-      <li class="nav-item">
+      <li className="nav-item">
         <a
-          class="nav-link collapsed"
+          className="nav-link collapsed"
           href="#"
           data-toggle="collapse"
           data-target="#collapsePages"
           aria-expanded="true"
           aria-controls="collapsePages"
         >
-          <i class="fas fa-fw fa-folder"></i>
+          <i className="fas fa-fw fa-folder"></i>
           <span>Người dùng</span>
         </a>
         <div
           id="collapsePages"
-          class="collapse"
+          className="collapse"
           aria-labelledby="headingPages"
           data-parent="#accordionSidebar"
         >
-          <div class="bg-white py-2 collapse-inner rounded">
-            <h6 class="collapse-header">Đăng nhập tài khoản</h6>
-            <a class="collapse-item" href="login.html">
+          <div className="bg-white py-2 collapse-inner rounded">
+            <h6 className="collapse-header">Đăng nhập tài khoản</h6>
+            <a className="collapse-item" href="login.html">
               Đăng nhập
             </a>
-            <a class="collapse-item" href="register.html">
+            <a className="collapse-item" href="register.html">
               Đăng ký
             </a>
           </div>
@@ -146,23 +139,23 @@ function MenuLeft(props) {
       </li>
 
       {/* <!-- Nav Item - Charts --> */}
-      <li class="nav-item">
-        <a class="nav-link" href="charts.html">
-          <i class="fas fa-fw fa-chart-area"></i>
+      <li className="nav-item">
+        <a className="nav-link" href="charts.html">
+          <i className="fas fa-fw fa-chart-area"></i>
           <span>Báo cáo tổng quan</span>
         </a>
       </li>
 
       {/* <!-- Nav Item - Tables --> */}
-      <li class="nav-item">
-        <a class="nav-link" href="tables.html">
-          <i class="fas fa-fw fa-table"></i>
+      <li className="nav-item">
+        <a className="nav-link" href="tables.html">
+          <i className="fas fa-fw fa-table"></i>
           <span>Tables</span>
         </a>
       </li>
 
       {/* <!-- Divider --> */}
-      <hr class="sidebar-divider d-none d-md-block" />
+      <hr className="sidebar-divider d-none d-md-block" />
     </ul>
   );
 }

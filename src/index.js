@@ -5,13 +5,18 @@ import "./static/sb-admin-2.css";
 import "./static/sb-admin-2.min.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
-import { createStore } from "redux";
+import { applyMiddleware, createStore } from "redux";
 import appReducers from "./reducers/index";
 import { Provider } from "react-redux";
 import "bootstrap/dist/css/bootstrap.css";
 import "bootstrap/dist/js/bootstrap.js";
+import thunk from "redux-thunk";
 
-const store = createStore(appReducers);
+const store = createStore(
+  appReducers,
+  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__(),
+  applyMiddleware(thunk)
+);
 
 ReactDOM.render(
   <Provider store={store}>

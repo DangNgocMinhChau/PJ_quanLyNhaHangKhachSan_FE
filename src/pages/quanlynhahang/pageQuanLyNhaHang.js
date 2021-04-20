@@ -4,7 +4,7 @@ import ModalCommon from "../../components/management_hotel/modalCommon";
 import TableManagementHotel from "./../../components/management_hotel/table";
 import { Modal, Button } from "antd";
 
-function Body(props) {
+function PageQuanLyNhaHang({ match, location }) {
   const [openModal, setOpenModal] = useState(false);
 
   function cancel() {
@@ -16,8 +16,6 @@ function Body(props) {
       {/* <!-- Page Heading --> */}
       <div className="d-sm-flex align-items-center justify-content-between mb-4">
         <h1 className="h3 mb-0 text-gray-800">Quản lý nhà hàng</h1>
-
-        <ModalCommon isVisible={openModal} handleCancel={() => cancel()} />
         <Button
           type="primary"
           onClick={() => {
@@ -38,7 +36,8 @@ function Body(props) {
                 Danh sách nhà hàng
               </h6>
             </div>
-            <TableManagementHotel />
+            <ModalCommon isVisible={openModal} handleCancel={() => cancel()} />
+            <TableManagementHotel match={match} />
           </div>
         </div>
       </div>
@@ -46,4 +45,4 @@ function Body(props) {
   );
 }
 
-export default Body;
+export default PageQuanLyNhaHang;
