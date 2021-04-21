@@ -67,7 +67,7 @@ function FormHotel({ onSave, form }) {
 
         <Form.Item
           label="Địa chỉ"
-          name="city"
+          name="address"
           // rules={[{ required: true, message: "Vui lòng nhập địa chỉ" }]}
         >
           <Input />

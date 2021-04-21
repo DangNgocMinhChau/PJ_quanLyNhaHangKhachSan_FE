@@ -1,15 +1,18 @@
-import { Table } from "antd";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import ModalCommon from "../../components/management_hotel/modalCommon";
 import TableManagementHotel from "./../../components/management_hotel/table";
 import { Modal, Button } from "antd";
-
+import * as act from "./../../actions/index";
 function PageQuanLyNhaHang({ match, location }) {
   const [openModal, setOpenModal] = useState(false);
 
   function cancel() {
     setOpenModal(false);
   }
+
+  useEffect(() => {
+    act.actFetchRestaurantRequest();
+  }, []);
 
   return (
     <div className="container-fluid">

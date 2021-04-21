@@ -5,17 +5,19 @@ import "./static/sb-admin-2.css";
 import "./static/sb-admin-2.min.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
-import { applyMiddleware, createStore } from "redux";
+import { applyMiddleware, compose, createStore } from "redux";
 import appReducers from "./reducers/index";
 import { Provider } from "react-redux";
 import "bootstrap/dist/css/bootstrap.css";
 import "bootstrap/dist/js/bootstrap.js";
 import thunk from "redux-thunk";
 
+// const composeEnhancer = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
+
 const store = createStore(
   appReducers,
-  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__(),
-  applyMiddleware(thunk)
+  window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__()
+  // composeEnhancer(applyMiddleware(thunk))
 );
 
 ReactDOM.render(
