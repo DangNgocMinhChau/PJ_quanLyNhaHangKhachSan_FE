@@ -1,0 +1,28 @@
+{
+  "listRestaurant": [
+    {
+      "id": "1",
+      "restaurantName": "Táo đỏ",
+      "ownerName": "Đặng Ngọc Minh Châu",
+      "phoneNumber": "0905315214",
+      "gender": "Nam",
+      "address": "Đà Nẵng"
+    },
+    {
+      "id": "2",
+      "restaurantName": "Goden-Fonix",
+      "ownerName": "Hoàng Huy",
+      "phoneNumber": "0888999123",
+      "gender": "Nam",
+      "address": "Quảng Bình"
+    },
+    {
+      "restaurantName": "King",
+      "ownerName": "Lê Thị Loan",
+      "phoneNumber": "0354144244",
+      "gender": "Nữ",
+      "address": "H18",
+      "id": "c3NXX_R"
+    }
+  ]
+}
